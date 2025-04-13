@@ -1,0 +1,222 @@
+$white: #ffffff;
+$light-gray: #f8f8f8;
+$gray-text: #7e7e82;
+$border-radius: 5px;
+
+@media all and (min-width: 320px) {
+  .price-list,
+  .price-list-header {
+    display: none;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .price-list {
+    display: inline-block;
+    margin: 0 32px 32px 32px;
+    margin-top: 16px;
+    padding: 0;
+    line-height: 18px;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: $white;
+    border-radius: $border-radius;
+  }
+
+  .price-list-header {
+    background-color: $white;
+    margin-bottom: 30px;
+    background: url("../img/line.svg") no-repeat top;
+    color: $gray-text;
+    font-weight: 400;
+    margin: 0;
+    padding: 16px;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+
+  .headed-stroke {
+    display: flex;
+    font-weight: 500;
+    line-height: 16px;
+    font-size: 14px;
+    color: $gray-text;
+    background-color: $light-gray;
+    width: 100%;
+    height: 32px;
+    padding-left: 16px;
+    position: relative;
+    right: 2px;
+    bottom: 2px;
+
+    &--first {
+      min-width: 320px;
+      display: flex;
+    }
+
+    &--second {
+      min-width: 74px;
+      display: flex;
+      padding-left: 36px;
+    }
+
+    &--third {
+      display: flex;
+      min-width: 81px;
+      padding-left: 32px;
+    }
+  }
+
+  .unheaded-stroke {
+    display: flex;
+    height: 64px;
+    width: 100%;
+    align-items: center;
+    background: url("../img/rectangle.svg") no-repeat center top;
+    background-size: 97%;
+  }
+
+  .headed-stroke {
+    &__first-column {
+      min-width: 318px;
+      text-wrap: nowrap;
+      display: flex;
+      padding-left: 16px;
+      padding-right: 36px;
+    }
+
+    &__second-column {
+      min-width: 74px;
+      padding-right: 32px;
+    }
+
+    &__third-column {
+      min-width: 81px;
+    }
+
+    &__fourth-column {
+      padding-left: 32px;
+      width: 100%;
+      height: 100%;
+      align-content: center;
+
+      &--button {
+        display: flex;
+        min-width: 119px;
+        height: 32px;
+        background: url("../img/make_a_choice.svg") no-repeat;
+        border: none;
+
+        > a {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 1366px) {
+  .price-list {
+    display: inline-block;
+    margin: 0 32px 32px 32px;
+    margin-top: 16px;
+    padding: 0;
+    line-height: 18px;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: $white;
+    border-radius: $border-radius;
+  }
+
+  .headed-stroke {
+    display: flex;
+    font-weight: 500;
+    line-height: 16px;
+    font-size: 14px;
+    color: $gray-text;
+    background-color: $light-gray;
+    width: 100%;
+    height: 32px;
+    padding-left: 16px;
+    position: relative;
+    right: 2px;
+    bottom: 2px;
+
+    &--first {
+      min-width: 440px;
+      display: flex;
+    }
+
+    &--second {
+      min-width: 184px;
+      display: flex;
+      padding-left: 36px;
+    }
+
+    &--third {
+      display: flex;
+      min-width: 211px;
+      padding-left: 32px;
+    }
+
+    &--fourth {
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  .unheaded-stroke {
+    display: flex;
+    height: 64px;
+    width: 100%;
+    align-items: center;
+    background: url("../img/rectangle.svg") no-repeat center top;
+    background-size: 97%;
+  }
+
+  .headed-stroke {
+    &__first-column {
+      min-width: 438px;
+      text-wrap: nowrap;
+      display: flex;
+      padding-left: 16px;
+      padding-right: 36px;
+
+      &[text-content="Диагностика"] {
+        background: none;
+      }
+    }
+
+    &__second-column {
+      min-width: 184px;
+      padding-right: 32px;
+    }
+
+    &__third-column {
+      min-width: 81px;
+    }
+
+    &__fourth-column {
+      padding-left: 102px;
+      width: 100%;
+      height: 100%;
+      align-content: center;
+
+      &--button {
+        display: flex;
+        min-width: 139px;
+        height: 32px;
+        background: url("../img/make_a_choice.svg") no-repeat;
+        border: none;
+        padding: 0;
+
+        > a {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

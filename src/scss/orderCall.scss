@@ -1,0 +1,179 @@
+$white: #ffffff;
+$border-color: #eaeaea;
+$placeholder-color: #b5b6bc;
+$text-color: #7e7e82;
+$accent-color: #ff3e79;
+$black: #000000;
+
+
+$base-font-size: 16px;
+$small-font-size: 14px;
+$header-font-size: 24px;
+$input-height: 48px;
+$button-height: 32px;
+$close-button-size: 40px;
+$mobile-padding: 16px;
+$tablet-padding: 32px;
+$header-line-height: 36px;
+$text-line-height: 24px;
+$small-line-height: 15px;
+
+
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 1440px;
+
+
+.order-call {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  background-color: $white;
+  height: 210%;
+  display: flex;
+  flex-direction: column;
+
+  @media all and (min-width: $mobile) {
+    padding-top: 50px;
+  }
+
+  @media all and (min-width: $tablet) {
+    padding-top: 0;
+  }
+}
+
+
+.order-call--header {
+  font-weight: 700;
+  line-height: $header-line-height;
+  font-size: $header-font-size;
+  background: url("../img/highlight.svg") no-repeat 2px;
+  margin: 0;
+  color: $black;
+
+  @media all and (min-width: $mobile) {
+    padding-left: $mobile-padding;
+    margin-top: 40px;
+    margin-bottom: 24px;
+  }
+
+  @media all and (min-width: $tablet) {
+    padding-left: $tablet-padding;
+    margin-top: 30px;
+  }
+}
+
+
+.order-call__form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.order-call__form--input {
+  height: $input-height;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  font-size: $base-font-size;
+  font-weight: 500;
+  
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: $placeholder-color;
+    border-color: transparent;
+    line-height: $text-line-height;
+  }
+
+  &[type="tel"] {
+    padding-left: $mobile-padding;
+    color: $black;
+  }
+
+  @media all and (min-width: $mobile) {
+    width: 268px;
+    margin-left: $mobile-padding;
+    margin-bottom: $mobile-padding;
+  }
+
+  @media all and (min-width: $tablet) {
+    width: 376px;
+    margin-left: $tablet-padding;
+  }
+}
+
+
+.order-call__form--consent {
+  display: inline-block;
+  margin: 0;
+  font-weight: 500;
+  line-height: $small-line-height;
+  font-size: $small-font-size;
+  color: $text-color;
+
+  > a {
+    color: $accent-color;
+    text-decoration: none;
+  }
+
+  @media all and (min-width: $mobile) {
+    max-width: 376px;
+    min-height: $input-height;
+    margin-left: $mobile-padding;
+  }
+
+  @media all and (min-width: $tablet) {
+    margin-left: $tablet-padding;
+  }
+}
+
+
+.order-call__form--button {
+  display: inline-block;
+  background: url("../img/send.svg") no-repeat;
+  height: $button-height;
+  width: 136px;
+  border: none;
+
+  > a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media all and (min-width: $mobile) {
+    margin-left: 168px;
+    margin-top: 23px;
+  }
+
+  @media all and (min-width: $tablet) {
+    margin-left: 288px;
+  }
+}
+
+
+.order-call--button {
+  background: url("../img/close.svg") no-repeat;
+  width: $close-button-size;
+  height: $close-button-size;
+  border: none;
+  position: relative;
+
+  @media all and (min-width: $mobile) {
+    left: $mobile-padding;
+    bottom: 130px;
+  }
+
+  @media all and (min-width: $tablet) {
+    left: -65px;
+    bottom: 65px;
+  }
+
+  @media all and (min-width: $desktop) {
+    left: -65px;
+    bottom: 65px;
+  }
+}

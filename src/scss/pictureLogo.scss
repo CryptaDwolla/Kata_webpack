@@ -1,0 +1,44 @@
+$logo-background-color: transparent !default;
+$logo-border-radius: 6px !default;
+
+.picture-logo {
+  &__low {
+    height: 176px;
+    margin-left: -16px !important;
+    background: $logo-background-color;
+  }
+
+  &__high {
+    display: none;
+    background: $logo-background-color;
+  }
+
+  @media all and (min-width: 768px) {
+    display: flex;
+    justify-self: flex-end;
+    width: 360px;
+    height: 208px;
+
+    &__low {
+      border-radius: $logo-border-radius;
+      width: 360px;
+      height: 208px;
+    }
+
+    &__high {
+      display: none;
+    }
+  }
+
+  @media all and (min-width: 1366px) {
+    &__high {
+      width: 531px;
+      height: 307px;
+      display: flex;
+    }
+
+    &__low {
+      display: none;
+    }
+  }
+}

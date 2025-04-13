@@ -1,0 +1,27 @@
+$opacity-full: 1;
+$opacity-half: 0.5;
+$sidebar-translate: 320px;
+$animation-duration: 0.5s;
+
+@media all and (min-width: 768px) {
+  @keyframes sidebarOpen {
+    50% {
+      transform: translateX($sidebar-translate);
+      transition: $animation-duration;
+    }
+    100% {
+      opacity: $opacity-full;
+    }
+  }
+}
+
+@media all and (min-width: 1366px), all and (min-width: 1440px) {
+  @keyframes identifier {
+    50% {
+      opacity: $opacity-half;
+    }
+    100% {
+      opacity: $opacity-full;
+    }
+  }
+}

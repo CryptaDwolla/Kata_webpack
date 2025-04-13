@@ -1,0 +1,102 @@
+$gray-text: #7e7e82;
+$dark-text: #1b1c21;
+$white: #ffffff;
+$slider-width-mobile: 260px;
+$slider-height-mobile: 200px;
+$slide-width-mobile: 240px;
+$slide-height-mobile: 240px;
+
+@media all and (min-width: 320px) {
+  .price-slider {
+    width: $slider-width-mobile;
+    height: $slider-height-mobile;
+    margin: 8px !important;
+    height: $slide-height-mobile;
+    width: $slide-width-mobile;
+
+    &-list {
+      padding: 0;
+      width: 100%;
+      height: 100%;
+
+      > li {
+        width: $slider-width-mobile;
+        height: $slider-height-mobile;
+      }
+
+      &__slide {
+        display: flex !important;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+
+        > span > a {
+          background: url("../img/make_a_choice.svg") no-repeat right bottom;
+          display: block;
+          height: 40px;
+          position: relative;
+          bottom: 43px;
+          right: 12px;
+        }
+
+        &--header {
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 16px;
+          margin: 16px 0 0 16px;
+          color: $gray-text;
+        }
+
+        &--span {
+          font-size: 14px;
+          line-height: 18px;
+          font-weight: 400;
+          height: 40px;
+          margin: 4px 0 0 16px;
+          color: $dark-text;
+        }
+      }
+    }
+
+    &-header {
+      color: $gray-text;
+      font-weight: 400;
+      margin: 0;
+      padding: 16px;
+      font-size: 16px;
+      line-height: 24px;
+      text-transform: uppercase;
+      background: url("../img/line.svg") no-repeat top;
+      background-size: 100%;
+    }
+  }
+}
+
+@media all and (min-width: 768px) {
+  .price-slider {
+    display: none !important;
+  }
+  .price-slider-header {
+    padding-left: 24px;
+  }
+}
+
+@media all and (min-width: 1366px) {
+  .price-list-header {
+    color: $gray-text;
+    font-weight: 400;
+    margin: 0 0 30px 0;
+    padding: 16px;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    background-color: $white;
+    background: url("../img/line.svg") no-repeat top;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .price-slider-header {
+    padding-left: 32px;
+  }
+}

@@ -1,0 +1,180 @@
+$white: #ffffff;
+$border-color: #eaeaea;
+$border-radius: 5px;
+
+$slide-width-mobile: 240px;
+$slide-width-tablet: 224px;
+$slide-height: 72px;
+$margin-mobile: 16px;
+$margin-tablet: 24px;
+$margin-desktop: 32px;
+$top-margin: 24px;
+
+.repairing-list {
+  list-style: none;
+  display: flex;
+  padding-left: 0;
+  margin-bottom: 0;
+
+  > a {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    color: transparent;
+  }
+
+  @mixin repair-item($icon-offset-y) {
+    background-position: 16px $icon-offset-y, 90% center;
+    background-repeat: no-repeat;
+    background-color: $white;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+  }
+
+  @media all and (min-width: 320px) {
+    > swiper-slide {
+      width: $slide-width-mobile;
+      height: $slide-height;
+      margin-left: $margin-mobile;
+      margin-bottom: $margin-mobile;
+    }
+
+    &__lenovo {
+      @include repair-item(20px);
+      background-image: url('../img/lenovo.png'), url('../img/go.svg');
+    }
+    &__samsung {
+      @include repair-item(17px);
+      background-image: url('../img/samsung.png'), url('../img/go.svg');
+    }
+    &__apple {
+      @include repair-item(12px);
+      background-image: url('../img/apple.png'), url('../img/go.svg');
+    }
+    &__viewsonic {
+      @include repair-item(26px);
+      background-image: url('../img/viewsonic.png'), url('../img/go.svg');
+    }
+    &__bosch {
+      @include repair-item(21px);
+      background-image: url('../img/bosch.png'), url('../img/go.svg');
+    }
+    &__hp {
+      @include repair-item(12px);
+      background-image: url('../img/hp.png'), url('../img/go.svg');
+      background-position: 12px 12px, 90% center;
+    }
+    &__acer {
+      @include repair-item(26px);
+      background-image: url('../img/acer.png'), url('../img/go.svg');
+    }
+    &__sony {
+      @include repair-item(21px);
+      background-image: url('../img/sony.png'), url('../img/go.svg');
+    }
+  }
+
+  @media all and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: $top-margin;
+
+    > li {
+      width: $slide-width-tablet;
+      height: $slide-height;
+      margin-left: $margin-tablet;
+      margin-bottom: $margin-mobile;
+    }
+
+    &__lenovo,
+    &__samsung,
+    &__apple,
+    &__viewsonic,
+    &__bosch,
+    &__hp,
+    &__acer,
+    &__sony {
+      @include repair-item(initial);
+    }
+
+    &__lenovo {
+      background-position: 16px 20px, 90% center;
+    }
+    &__samsung {
+      background-position: 16px 17px, 90% center;
+    }
+    &__apple {
+      background-position: 16px 12px, 90% center;
+    }
+    &__viewsonic {
+      background-position: 16px 26px, 90% center;
+    }
+    &__bosch {
+      background-position: 16px 21px, 90% center;
+    }
+    &__hp {
+      background-position: 12px 12px, 90% center;
+    }
+    &__acer {
+      background-position: 16px 26px, 90% center;
+    }
+    &__sony {
+      background-position: 16px 21px, 90% center;
+    }
+  }
+
+  @media all and (min-width: 1366px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: $top-margin;
+
+    > swiper-slide {
+      width: $slide-width-mobile;
+      height: $slide-height;
+      margin-left: $margin-desktop;
+      margin-bottom: $margin-mobile;
+    }
+
+    &__lenovo,
+    &__samsung,
+    &__apple,
+    &__viewsonic,
+    &__bosch,
+    &__hp,
+    &__acer,
+    &__sony {
+      @include repair-item(initial);
+    }
+
+    &__lenovo {
+      background-position: 16px 20px, 90% center;
+    }
+    &__samsung {
+      background-position: 16px 17px, 90% center;
+    }
+    &__apple {
+      background-position: 16px 12px, 90% center;
+    }
+    &__viewsonic {
+      background-position: 16px 26px, 90% center;
+    }
+    &__bosch {
+      background-position: 16px 21px, 90% center;
+    }
+    &__hp {
+      background-position: 12px 12px, 90% center;
+    }
+    &__acer {
+      background-position: 16px 26px, 90% center;
+    }
+    &__sony {
+      background-position: 16px 21px, 90% center;
+    }
+  }
+}
+
+@media all and (min-width: 768px) {
+  .swiper-container {
+    display: none !important;
+  }
+};

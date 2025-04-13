@@ -1,0 +1,24 @@
+$opacity-value: 0.1;
+
+
+@media all and (min-width: 320px) {
+  .content-opacity {
+    opacity: $opacity-value;
+    position: absolute;
+    z-index: 50;
+  }
+}
+
+@media all and (min-width: 1366px) {
+  .content {
+    margin-left: 305px;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 1440px;
+  }
+}

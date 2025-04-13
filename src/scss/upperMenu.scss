@@ -1,0 +1,329 @@
+$white: #ffffff;
+$light-gray-bg: #f8f8f8;
+$text-gray: #7e7e82;
+$text-dark: #1b1c21;
+$black: #000000;
+
+$menu-icon-size: 40px;
+$menu-item-margin: 16px;
+$header-font-size: 28px;
+$header-line-height: 40px;
+$desktop-header-padding: 42px;
+
+.upper-menu {
+  display: flex;
+  padding-top: 18.6px;
+  padding-bottom: 18.6px;
+  background-color: $white;
+  width: 100%;
+  object-fit: cover;
+
+  &__header {
+    padding-left: 12px;
+    align-self: center;
+    font-size: $header-font-size;
+    line-height: $header-line-height;
+    font-weight: bold;
+  }
+
+  &__first-part {
+    display: flex;
+
+    &--menu {
+      display: flex;
+      width: $menu-icon-size;
+      height: $menu-icon-size;
+      margin-left: 0px;
+      align-self: center;
+      justify-content: flex-start;
+
+      width: 96.55px;
+      height: 50.81px;
+      margin-left: 16.73px;
+      flex-direction: flex-end;
+
+      display: flex;
+      justify-content: flex-start;
+      width: $menu-icon-size;
+      height: $menu-icon-size;
+      margin-left: $menu-item-margin;
+      background: url('../img/burger.svg')
+        no-repeat;
+      border: none;
+      background-color: transparent;
+
+      > a {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &--logo {
+      margin-left: 17px;
+    }
+
+    &--divider {
+      display: flex;
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+  }
+
+  &__divider {
+    display: flex;
+    margin-left: 16.73px;
+    margin-right: 20px;
+  }
+
+  &__call,
+  &__chat,
+  &__profile,
+  &__repair,
+  &__checkstatus {
+    display: flex;
+    width: $menu-icon-size;
+    height: $menu-icon-size;
+    margin-left: $menu-item-margin;
+    align-self: center;
+  }
+
+  &__repair {
+    margin-right: $menu-item-margin;
+  }
+
+  &__shadow {
+    display: flex;
+    width: 100%;
+    max-height: 1px;
+    object-fit: cover;
+  }
+
+  &__stick {
+    display: none;
+    position: absolute;
+    top: 28px;
+  }
+
+  &__second-part {
+    display: flex;
+    justify-content: flex-end;
+    height: $menu-icon-size;
+    align-self: center;
+
+    &--call,
+    &--chat,
+    &--profile {
+      display: flex;
+      margin-left: $menu-item-margin;
+      height: $menu-icon-size;
+      width: $menu-icon-size;
+      border: none;
+
+      > a {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &--call {
+      background: url('../img/call.svg')
+        no-repeat;
+    }
+
+    &--chat {
+      background: url('../img/chat.svg')
+        no-repeat;
+    }
+
+    &--profile {
+      background: url('../img/profile.svg')
+        no-repeat;
+    }
+  }
+
+  &__third-part {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: $menu-item-margin;
+    margin-right: $menu-item-margin;
+
+    > a {
+      text-decoration: none;
+      color: $text-gray;
+      padding: 8px 8px 8px $menu-item-margin;
+    }
+
+    &--repair,
+    &--checkstatus {
+      display: flex;
+      padding-left: $menu-item-margin;
+    }
+
+    &--bid,
+    &--status {
+      display: none;
+      line-height: 24px;
+      font-size: 16px;
+      font-weight: 500;
+      border: none;
+      background-color: transparent;
+
+      > a {
+        text-decoration: none;
+        color: $black;
+        font-weight: 500;
+      }
+    }
+
+    &--bid {
+      min-width: 125px;
+    }
+
+    &--status {
+      min-width: 120px;
+      margin-left: 32px;
+    }
+
+    &--bid--icon--bg,
+    &--bid--status--icon--bg {
+      border: none;
+
+      > a {
+        display: flex;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &--bid--icon--bg {
+      background: url('../img/repair.svg')
+        no-repeat;
+      width: $menu-icon-size;
+      height: $menu-icon-size;
+      margin-left: $menu-item-margin;
+
+      @media all and (min-width: 1366px) {
+        margin-left: 6px;
+      }
+    }
+
+    &--bid--status--icon--bg {
+      background: url('../img/checkstatus.svg')
+        no-repeat;
+      width: $menu-icon-size;
+      height: $menu-icon-size;
+      margin-left: $menu-item-margin;
+
+      @media all and (min-width: 1366px) {
+        margin-left: 8px;
+      }
+    }
+
+    &--bid--icon,
+    &--bid--status--icon {
+      color: $text-dark;
+    }
+  }
+
+  @media all and (min-width: 320px) {
+    &__stick {
+      display: none;
+    }
+
+    &__first-part {
+      width: 100%;
+    }
+
+    &__header {
+      display: none;
+    }
+
+    &__first-part--divider {
+      display: none;
+    }
+
+    &__second-part {
+      display: none;
+    }
+
+    &__third-part--bid,
+    &__third-part--status {
+      display: none;
+    }
+  }
+
+  @media all and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+
+    &__first-part {
+      display: flex;
+      padding-left: 10px;
+    }
+
+    &__header {
+      display: none;
+    }
+
+    &__stick {
+      display: none;
+    }
+
+    &__second-part {
+      display: flex;
+    }
+
+
+    &__third-part {
+      margin-right: 20px;
+    }
+
+    &__third-part--status {
+      display: none;
+    }
+  }
+
+  @media all and (min-width: 1366px) {
+    background-color: $light-gray-bg;
+    padding-bottom: 0;
+    height: 60px;
+
+    &__first-part {
+      display: none;
+    }
+
+    &__stick {
+      display: flex;
+    }
+
+    &__header {
+      display: flex;
+      padding-left: $desktop-header-padding;
+    }
+
+    &__second-part {
+      visibility: hidden;
+      display: none;
+    }
+
+    &__third-part {
+      justify-content: flex-end;
+    }
+
+    &__shadow {
+      display: none;
+    }
+
+    &__third-part--bid,
+    &__third-part--status {
+      display: flex;
+    }
+
+    &__third-part--divider {
+      display: none;
+    }
+  }
+}
+
+

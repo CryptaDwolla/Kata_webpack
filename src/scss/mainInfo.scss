@@ -1,0 +1,47 @@
+$color-primary: #1b1c21;
+$color-secondary: #7e7e82;
+$tap-highlight: transparent;
+
+
+.main-info {
+  &__menu {
+    &__list {
+      padding: 0;
+      margin: 0;
+
+      > li {
+        padding-left: 24px;
+        list-style: none;
+        line-height: 32px;
+        font-size: 16px;
+        color: $color-primary;
+        margin-bottom: 32px;
+
+        &:hover {
+          font-weight: 500;
+          color: $color-secondary;
+          background: url("../img/highlight.svg") no-repeat left;
+        }
+
+        > a {
+          text-decoration: none;
+          color: inherit;
+
+          &:hover {
+            -webkit-tap-highlight-color: $tap-highlight;
+            animation-name: identifier;
+            animation-duration: 1s;
+            color: $color-secondary;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media all and (min-width: 320px), 
+       all and (min-width: 768px), 
+       all and (min-width: 1366px),
+       all and (min-width: 1440px) {
+}
